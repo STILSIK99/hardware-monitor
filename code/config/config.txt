@@ -1,0 +1,1 @@
+{"NN_learning_params": {"batch_size": 30, "epochs": 100, "verbose": 1}, "period": 2}

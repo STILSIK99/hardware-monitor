@@ -1,0 +1,20 @@
+create table params(
+    id integer primary key autoincrement,
+    name text UNIQUE
+);
+
+CREATE TABLE nodes (
+    id      INTEGER PRIMARY KEY AUTOINCREMENT,
+    address TEXT    UNIQUE,
+    type    TEXT,
+    name    TEXT
+);
+
+create table data(
+    address text,
+    paramName text,
+    value text,
+    time  TIMESTAMP default CURRENT_TIMESTAMP
+);
+
+create table periods(id integer primary key autoincrement,start TIMESTAMP default CURRENT_TIMESTAMP,finish TIMESTAMP default CURRENT_TIMESTAMP);

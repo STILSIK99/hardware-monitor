@@ -1,0 +1,2201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1011</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>1115</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton, QLineEdit, QTabWidget, QWidget,
+QTabWidget QTabBar::tab,QLabel {
+	background-color : rgba(255,255,255,80); 
+}
+QGroupBox::head{
+	background: rgba(255,255,255,80);
+}
+
+QGroupBox {
+	padding: 15px 0px;
+	border: 0;
+}
+
+
+#tab, #tab_2, #tab_3, #tab_4,
+#tab_5, #tab_6,#tab_7,#tab_8,
+#tab_9,#tab_10,#tab_11,#tab_12,
+ #tabWidget,#tabWidget_2,#tabWidget_3,
+#MainWindow {
+	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0497512 rgba(104, 138, 255, 255), stop:1 rgba(255, 139, 255, 255));
+}
+QTabWidget QTabBar::tab:selected{background-color: #ffffff;}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_15">
+    <item>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_5">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <attribute name="title">
+        <string>Параметры сбора данных</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <attribute name="title">
+            <string>Конфигурирование агентов</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QGroupBox" name="groupBox">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Агенты сбора данных:</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetDefaultConstraint</enum>
+               </property>
+               <property name="leftMargin">
+                <number>11</number>
+               </property>
+               <item>
+                <widget class="QTableView" name="tableView">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_2">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Управление агентами:</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_3">
+               <item row="0" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox_13">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Добавление агента:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_11">
+                  <item>
+                   <widget class="QLabel" name="label_2">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Ip адрес агента</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="placeholderText">
+                     <string>127.0.0.1</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_2">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Введите название агента</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="lineEdit_12">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Пароль для сбора данных</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Добавить агента</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_20">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Добавить список агентов</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox_4">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Удаление агента:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="label_3">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Выберите агента</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBox_3">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_2">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Удалить агента</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <attribute name="title">
+            <string>Конфигурирование параметров</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Параметры протокола SNMP для сбора:</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
+                <widget class="QTableView" name="tableView_3">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_6">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Управление параметрами:</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout">
+               <item row="0" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox_7">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Добавление параметров:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_39">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="title">
+                     <string/>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_23">
+                     <item>
+                      <widget class="QLabel" name="label_5">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Введите параметр протокола SNMP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_3">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>oid</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_8">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="placeholderText">
+                        <string>mib</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox_9">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>full</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>delta</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_3">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true"/>
+                       </property>
+                       <property name="text">
+                        <string>Добавить параметр</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_10">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Добавить список параметров</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox_8">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Удаление параметров:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <item>
+                   <widget class="QLabel" name="label_6">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Выберите параметр протокола SNMP</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBox_4">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_4">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Удалить параметр</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <attribute name="title">
+            <string>Конфигурирование инцидентов</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_4">
+            <item row="0" column="1">
+             <widget class="QGroupBox" name="groupBox_35">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Информация по инцидентам:</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="0" column="0">
+                <widget class="QGroupBox" name="groupBox_3">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Редактирование типов инцидентов:</string>
+                 </property>
+                 <layout class="QFormLayout" name="formLayout_22">
+                  <item row="1" column="0">
+                   <widget class="QGroupBox" name="groupBox_22">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="title">
+                     <string>Удаление типа инцидента:</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_19">
+                     <item>
+                      <widget class="QComboBox" name="comboBox_6">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_13">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Удалить тип инцидентов</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QGroupBox" name="groupBox_12">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="title">
+                     <string>Удаление события:</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_10">
+                     <item>
+                      <widget class="QLabel" name="label_9">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Выберите событие:</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QComboBox" name="comboBox_5">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_6">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Удалить событие</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QGroupBox" name="groupBox_16">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="title">
+                     <string>Добавление типа инцидента:</string>
+                    </property>
+                    <layout class="QFormLayout" name="formLayout_23">
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_15">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Введите название типа инцидентов</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLineEdit" name="lineEdit_7">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QPushButton" name="pushButton_12">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Добавить тип инцидентов</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QGroupBox" name="groupBox_34">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Виды инцидентов:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout">
+                  <item>
+                   <widget class="QTableView" name="tableView_7">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QGroupBox" name="groupBox_11">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Добавление события:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_8">
+                  <item>
+                   <widget class="QLabel" name="label_4">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Выберите тип инцидента:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBox_2">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_8">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Временная метка начала события безопасности</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateTimeEdit" name="dateTimeEdit">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="displayFormat">
+                     <string>dd.MM.yyyy HH:mm:ss</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_7">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Временная метка окончания события безопасности</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDateTimeEdit" name="dateTimeEdit_2">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="displayFormat">
+                     <string>dd.MM.yyyy HH:mm:ss</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_5">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Добавить событие безопасности</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QGroupBox" name="groupBox_9">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>События безопасности:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <item>
+                   <widget class="QTableView" name="tableView_4">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Сбор данных</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QGroupBox" name="groupBox_30">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Просмотр собранных данных:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QTableView" name="tableView_6">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_24">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Упраление данными:</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_11">
+           <item row="0" column="0" colspan="2">
+            <widget class="QPushButton" name="pushButton_18">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Включить сбор</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QPushButton" name="pushButton_19">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Остановить сбор</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QGroupBox" name="groupBox_26">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Фильтрация:</string>
+             </property>
+             <layout class="QFormLayout" name="formLayout_7">
+              <item row="0" column="0" colspan="2">
+               <widget class="QGroupBox" name="groupBox_27">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="title">
+                 <string>по агенту:</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_24">
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_4">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>включить</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_17">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Введите Ip адрес узла</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_9">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="placeholderText">
+                    <string>127.0.0.1</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QGroupBox" name="groupBox_28">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="title">
+                 <string>по параметру:</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_25">
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_5">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>включить</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_18">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Введите параметр протокола SNMPv2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_10">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="placeholderText">
+                    <string>(oid) (mib)</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QGroupBox" name="groupBox_29">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="title">
+                 <string>по времени:</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_26">
+                 <item>
+                  <widget class="QCheckBox" name="checkBox_6">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>включить</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_19">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>С</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDateTimeEdit" name="dateTimeEdit_5">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="displayFormat">
+                    <string>dd.MM.yyyy HH:mm:ss</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_20">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>До</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QDateTimeEdit" name="dateTimeEdit_6">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="displayFormat">
+                    <string>dd.MM.yyyy HH:mm:ss</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_21">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Отобразить данные</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Нейронная сеть</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTabWidget" name="tabWidget_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_4">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <attribute name="title">
+            <string>Управление нейронными сетями</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_17">
+            <item row="0" column="0">
+             <widget class="QGroupBox" name="groupBox_23">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QFormLayout" name="formLayout_6">
+               <item row="0" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox_15">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Создание:</string>
+                 </property>
+                 <layout class="QFormLayout" name="formLayout_5">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_11">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Название нейронной сети:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="lineEdit_4">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QPushButton" name="pushButton_15">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Создать нейронную сеть</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QPushButton" name="pushButton_16">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Сохранить (обновить) нейронную сеть</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox_14">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Обучение:</string>
+                 </property>
+                 <layout class="QFormLayout" name="formLayout_4">
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Начало периода:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0" colspan="2">
+                   <widget class="QPushButton" name="pushButton_17">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Обучить нейронную сеть</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QLabel" name="label_10">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Конец периода:</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QDateTimeEdit" name="dateTimeEdit_3">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="displayFormat">
+                     <string>dd.MM.yyyy HH:mm:ss</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="1">
+                   <widget class="QDateTimeEdit" name="dateTimeEdit_4">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="displayFormat">
+                     <string>dd.MM.yyyy HH:mm:ss</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QGroupBox" name="groupBox_25">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QFormLayout" name="formLayout_18">
+               <item row="0" column="0" colspan="2">
+                <widget class="QGroupBox" name="groupBox_17">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Загрузка:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <item>
+                   <widget class="QTableView" name="tableView_2">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QComboBox" name="comboBox">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_14">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Загрузить нейронную сеть</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QGroupBox" name="groupBox_38">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="title">
+                  <string>Удаление:</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_34">
+                  <item>
+                   <widget class="QComboBox" name="comboBox_8">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="pushButton_7">
+                    <property name="font">
+                     <font>
+                      <family>Times New Roman</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Удалить нейронную сеть</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_9">
+           <property name="font">
+            <font>
+             <family>Times New Roman</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <attribute name="title">
+            <string>Параметры нейронной сети</string>
+           </attribute>
+           <layout class="QFormLayout" name="formLayout_19">
+            <item row="1" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_18">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Данные по нейронной сети:</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_13">
+               <item>
+                <widget class="QTextEdit" name="textEdit">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="0" colspan="2">
+             <widget class="QGroupBox" name="groupBox_19">
+              <property name="font">
+               <font>
+                <family>Times New Roman</family>
+                <pointsize>10</pointsize>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="title">
+               <string>Параметры протокола SNMP, используемых для обучения данной нейронной сети:</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <item>
+                <widget class="QTableView" name="tableView_5">
+                 <property name="font">
+                  <font>
+                   <family>Times New Roman</family>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <attribute name="title">
+        <string>Рабочий режим</string>
+       </attribute>
+       <layout class="QFormLayout" name="formLayout_13">
+        <item row="4" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_37">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Управление мониторингом:</string>
+          </property>
+          <layout class="QFormLayout" name="formLayout_16">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButton_22">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Выключить мониторинг</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="pushButton_23">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>200</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Включить мониторинг</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QGroupBox" name="groupBox_21">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Логгирование инцидентов:</string>
+             </property>
+             <layout class="QFormLayout" name="formLayout_14">
+              <item row="1" column="0" colspan="2">
+               <widget class="QTextEdit" name="textEdit_3">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_20">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="title">
+           <string>Узлы для мониторинга параметров безопасности протокола SNMP:</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QTextEdit" name="textEdit_2">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="groupBox_31">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Управление агентами:</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="0">
+               <widget class="QGroupBox" name="groupBox_32">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="title">
+                 <string>Добавление агентов:</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_28">
+                 <item>
+                  <widget class="QLabel" name="label_12">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Адрес агента в сети</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_5">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="placeholderText">
+                    <string>127.0.0.1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_13">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Название агента</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_6">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="label_22">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Пароль для сбора данных</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLineEdit" name="lineEdit_11">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="echoMode">
+                    <enum>QLineEdit::Password</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_8">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Добавить агента</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_9">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Добавить список агентов</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QGroupBox" name="groupBox_33">
+                <property name="font">
+                 <font>
+                  <family>Times New Roman</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="title">
+                 <string>Удаление агентов:</string>
+                </property>
+                <layout class="QFormLayout" name="formLayout_15">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_14">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Выберите агента</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="pushButton_11">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Удалить агента</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0" colspan="2">
+                  <widget class="QComboBox" name="comboBox_7">
+                   <property name="font">
+                    <font>
+                     <family>Times New Roman</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_16"/>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_16">
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1011</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Программа</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_4"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Режим работы</string>
+    </property>
+    <addaction name="action_5"/>
+    <addaction name="separator"/>
+    <addaction name="action_7"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="action_8"/>
+    <addaction name="separator"/>
+    <addaction name="action_9"/>
+    <addaction name="separator"/>
+    <addaction name="action_10"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>Подключить БД</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Создать БД</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Включить сбор</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>Включить управление параметрами</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>Параметры сбора</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>Нейронная сеть</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="text">
+    <string>Рабочий режим</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>tableView</tabstop>
+  <tabstop>tableView_3</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
